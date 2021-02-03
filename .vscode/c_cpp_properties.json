@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "includePath": [
+                "C:\\wxWidgets-3.1.4\\include\\",
+                "C:/wxWidgets-3.1.4/lib/gcc_lib/mswu"
+            ],
+            "windowsSdkVersion": "10.0.18362.0",
+            "compilerPath": "D:/OtherInstallFiles/Visual studio/2019/community/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}
