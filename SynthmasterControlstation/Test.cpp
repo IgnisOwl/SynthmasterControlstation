@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     cout << initialPosition.x << endl;
 
 
-    Sleep(100);
+    Sleep(1000);
 
     HWND hwndObj = FindWindowA(NULL, "Synthmaster 2.9"); //first arg: Window class, second arg: Window title.
     HWND previousForegroundWindow = GetForegroundWindow();
@@ -31,6 +31,20 @@ int main(int argc, char *argv[]) {
     Sleep(100);
 
     SendInput(1, &input, sizeof(input));
+
+    input.mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
+    SendInput(1,&input,sizeof(input));
+
+    Sleep(500);
+
+    input.mi.dwFlags = MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE;
+    input.mi.dx = 300.0f * (65536.0f / fScreenWidth);
+    input.mi.dy = 100.0f * (65536.0f / fScreenHeight);
+    SendInput(1,&input,sizeof(input));
+
+    input.mi.dwFlags = MOUSEEVENTF_LEFTUP;
+    SendInput(1,&input,sizeof(input));
+
     Sleep(100);
 
     //SetForegroundWindow(previousForegroundWindow);
